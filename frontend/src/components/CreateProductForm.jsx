@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { PlusCircle, Upload, Loader } from "lucide-react";
 import { useProductStore } from "../stores/useProductStore";
 
-const categories = ["sunscreen", "mositurizer", "serum", "scrub", "cleanser", "bodywash", "bodylotion", "lipbam"];
+const categories = ["sunscreen", "moisturizer", "serum", "scrub", "cleanser", "bodywash", "bodylotion", "lipbam"];
 
 const CreateProductForm = () => {
   const [newProduct, setNewProduct] = useState({
