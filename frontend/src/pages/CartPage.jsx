@@ -1,6 +1,7 @@
 import { useCartStore } from "../stores/useCartStore";
 import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 import PeopleAlsoBought from "../components/PeopleAlsoBought";
 import OrderSummary from "../components/OrderSummary";
@@ -58,11 +59,11 @@ const EmptyCartUI = () => (
 		animate={{ opacity: 1, y: 0 }}
 		transition={{ duration: 0.5 }}
 	>
-		<ShoppingCart className='h-24 w-24 text-gray-300' />
+		<ShoppingCart className='h-24 w-24 text-[#8d5515]' />
 		<h3 className='text-2xl font-semibold '>Your cart is empty</h3>
-		<p className='text-gray-400'>Looks like you {"haven't"} added anything to your cart yet.</p>
+		<p className='text-[#0f237e]'>Looks like you {"haven't"} added anything to your cart yet.</p>
 		<Link
-			className='mt-4 rounded-md bg-emerald-500 px-6 py-2 text-white transition-colors hover:bg-emerald-600'
+			className='mt-4 rounded-md bg-[#a661c2] px-6 py-2 text-white transition-colors hover:bg-[#7744ec]'
 			to='/'
 		>
 			Start Shopping
