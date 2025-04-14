@@ -16,45 +16,45 @@ const ProductsList = () => {
         transition={{ duration: 0.8 }}>
 
           <table className="min-w-full divide-y divide-[#af3f57]">
-          <thead className='bg-gray-700'>
+          <thead className='bg-[#683f11]'>
 					<tr>
 						<th
 							scope='col'
-							className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'
+							className='px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider'
 						>
 							Product
 						</th>
 						<th
 							scope='col'
-							className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'
+							className='px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider'
 						>
 							Price
 						</th>
 						<th
 							scope='col'
-							className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'
+							className='px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider'
 						>
 							Category
 						</th>
 
 						<th
 							scope='col'
-							className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'
+							className='px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider'
 						>
 							Featured
 						</th>
 						<th
 							scope='col'
-							className='px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider'
+							className='px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider'
 						>
 							Actions
 						</th>
 					</tr>
 				</thead>
 
-				<tbody className='bg-gray-800 divide-y divide-gray-700'>
+				<tbody className='bg-[#771e31] divide-y divide-gray-700'>
 					{products?.map((product,index) => (
-						<tr key={product._id || index} className='hover:bg-gray-700'>
+						<tr key={product._id || index} className='hover:bg-[#b6455e]'>
 							<td className='px-6 py-4 whitespace-nowrap'>
 								<div className='flex items-center'>
 									<div className='flex-shrink-0 h-10 w-10'>
@@ -70,17 +70,17 @@ const ProductsList = () => {
 								</div>
 							</td>
 							<td className='px-6 py-4 whitespace-nowrap'>
-								<div className='text-sm text-gray-300'>${(product.price ?? 0).toFixed(2)}</div>
+								<div className='text-sm text-[#ffff]'>${(product.price ?? 0).toFixed(2)}</div>
 							</td>
 							<td className='px-6 py-4 whitespace-nowrap'>
-								<div className='text-sm text-gray-300'>{product.category}</div>
+								<div className='text-sm text-[#ffff]'>{product.category}</div>
 							</td>
 							<td className='px-6 py-4 whitespace-nowrap'>
 								<button
 									onClick={() => toggleFeautredProduct(product._id)}
 									className={`p-1 rounded-full ${
-										product.isFeatured ? "bg-yellow-400 text-gray-900" : "bg-gray-600 text-gray-300"
-									} hover:bg-yellow-500 transition-colors duration-200`}
+										product.isFeatured ? "bg-[#f1ca9d] text-[#580823]" : "bg-[#8174A0] text-gray-300"
+									} hover:bg-[#f0b067] transition-colors duration-200`}
 								>
 									<Star className='h-5 w-5' />
 								</button>

@@ -4,11 +4,11 @@ import { useCartStore } from "../stores/useCartStore";
 
 const GiftCouponCard = () => {
 	const [userInputCode, setUserInputCode] = useState("");
-	const { coupon, isCouponApplied, applyCoupon } = useCartStore();
+	const { coupon, isCouponApplied, applyCoupon,getMyCoupon, removeCoupon } = useCartStore();
 
-	// useEffect(() => {
-	// 	getMyCoupon();
-	// }, [getMyCoupon]);
+	useEffect(() => {
+		getMyCoupon();
+	}, [getMyCoupon]);
 
 	useEffect(() => {
 		if (coupon) setUserInputCode(coupon.code);
@@ -19,10 +19,10 @@ const GiftCouponCard = () => {
 		applyCoupon(userInputCode);
 	};
 
-	// const handleRemoveCoupon = async () => {
-	// 	await removeCoupon();
-	// 	setUserInputCode("");
-	// };
+	const handleRemoveCoupon = async () => {
+		await removeCoupon();
+		setUserInputCode("");
+	};
 
 	return (
 		<motion.div
@@ -40,8 +40,8 @@ const GiftCouponCard = () => {
 						type='text'
 						id='voucher'
 						className='block w-full rounded-lg border border-[#411055] bg-[#f3d1b1]
-            p-2.5 text-sm text-white placeholder-[#6d4520] focus:border-emerald-500 
-            focus:ring-emerald-500'
+            p-2.5 text-sm text-black placeholder-[#6d4520] focus:border-[#411055] 
+            focus:ring-[#411055]'
 						placeholder='Enter code here'
 						value={userInputCode}
 						onChange={(e) => setUserInputCode(e.target.value)}
