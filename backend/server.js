@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import path from "path";
+import cors from "cors";
 
 import authRoutes from "./routes/auth_route.js";
 import productRoutes from "./routes/product_route.js";
@@ -23,6 +24,16 @@ const __dirname = path.resolve();
 app.use(express.json()); //allows you to parse the body of the request
 app.use(cookieParser());
 
+const allowedOrigins = [
+	"http://localhost:5173", // Dev
+	"https://skincarestore.pages.dev", // Production
+  ];
+
+  app.use(cors({
+	origin: allowedOrigins,
+	credentials: true,
+  }));
+
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
@@ -38,7 +49,7 @@ if (process.env.NODE_ENV === "production") {
 	});
 }
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log("Server is running on http://localhost:" + PORT);
 
     connectDB();
