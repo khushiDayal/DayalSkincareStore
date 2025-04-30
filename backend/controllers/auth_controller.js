@@ -53,14 +53,26 @@ export const login = async (req, res) => {
       { expiresIn: '7d' }
     );
 
-    res.json({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      role: user.role,
-      token,
-      refreshToken,
-    });
+res
+  .cookie("accessToken", token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "None", // Required for cross-site cookie
+    maxAge: 60 * 60 * 1000, // 1 hour
+  })
+  .cookie("refreshToken", refreshToken, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "None",
+    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+  })
+  .json({
+    _id: user._id,
+    name: user.name,
+    email: user.email,
+    role: user.role,
+  });
+
   } catch (error) {
     console.error('Login error:', error);
     res.status(500).json({ message: 'Server error' });
