@@ -29,19 +29,27 @@ This project is designed for small businesses and skincare brands looking for a 
 Follow these steps to run the project locally:
 
 # Clone the repository
+```bash
 git clone https://github.com/khushiDayal/DayalSkincareStore.git
 cd DayalSkincareStore
 
+```
 # Install frontend dependencies
+```bash
 cd frontend
 npm install
 
+```
 # Start the frontend (React app)
+```bash
 npm run dev
-
+```
 # Navigate to backend folder
+```bash
 cd backend
 npm install
-
+```
 # Start the backend server
+```bash
 node server.js
+```
