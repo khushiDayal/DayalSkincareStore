@@ -17,10 +17,27 @@
 
 ### 🔹 Payments
 - *Stripe API* – Secure and seamless online payments
+# 🧴 Dayal Skincare Store
 
-### 🔹 Tools & Libraries
-- *Axios* – HTTP client for API calls
-- *dotenv* – Environment variable management
-- *bcryptjs* – Password hashing
-- *cors* – Cross-origin resource sharing support
-- *concurrently* – Run frontend and backend in parallel (dev only)
+*Dayal Skincare Store* is a full-stack e-commerce application built with the *MERN stack* (MongoDB, Express.js, React, Node.js). It offers a modern and responsive user experience with secure authentication, product management, and online payment capabilities.
+
+This project is designed for small businesses and skincare brands looking for a functional, scalable, and customizable web store.
+
+---
+# Clone the repository
+git clone https://github.com/khushiDayal/DayalSkincareStore.git
+cd DayalSkincareStore
+
+# Install frontend dependencies
+cd frontend
+npm install
+
+npm run dev
+
+# Install backend dependencies
+cd backend
+npm install
+
+node server.js
+
+# Run both servers (use concurrently or separately)
