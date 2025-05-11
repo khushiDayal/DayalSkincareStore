@@ -1,3 +1,8 @@
+# 🧴 Dayal Skincare Store
+
+*Dayal Skincare Store* is a full-stack e-commerce application built with the *MERN stack* (MongoDB, Express.js, React, Node.js). It offers a modern and responsive user experience with secure authentication, product management, and online payment capabilities.
+
+This project is designed for small businesses and skincare brands looking for a functional, scalable, and customizable web store.
 ## 🛠️ Tech Stack
 
 ### 🔹 Frontend
@@ -17,13 +22,12 @@
 
 ### 🔹 Payments
 - *Stripe API* – Secure and seamless online payments
-# 🧴 Dayal Skincare Store
 
-*Dayal Skincare Store* is a full-stack e-commerce application built with the *MERN stack* (MongoDB, Express.js, React, Node.js). It offers a modern and responsive user experience with secure authentication, product management, and online payment capabilities.
 
-This project is designed for small businesses and skincare brands looking for a functional, scalable, and customizable web store.
+## 🧩 Installation & Setup
 
----
+Follow these steps to run the project locally:
+
 # Clone the repository
 git clone https://github.com/khushiDayal/DayalSkincareStore.git
 cd DayalSkincareStore
@@ -32,12 +36,12 @@ cd DayalSkincareStore
 cd frontend
 npm install
 
+# Start the frontend (React app)
 npm run dev
 
-# Install backend dependencies
+# Navigate to backend folder
 cd backend
 npm install
 
+# Start the backend server
 node server.js
-
-# Run both servers (use concurrently or separately)
